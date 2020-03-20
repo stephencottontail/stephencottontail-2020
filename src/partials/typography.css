@@ -63,9 +63,11 @@ ol ol {
 	padding: 0 0 0 var( --base-spacing );
 }
 
-abbr,
+abbr[title],
 acronym {
 	border-bottom: 1px dashed var( --text-color );
+	cursor: help;
+	text-decoration: none;
 }
 
 code,
