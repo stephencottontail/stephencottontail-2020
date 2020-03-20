@@ -1,4 +1,33 @@
 :root {
-	--bg-color: #f2f5f9;
-	--text-color: #d0c0c0;
+	--blue: #494e6b;
+	--sand-500: #665a5f;
+	--sand-400: #807178;
+	--sand-300: #98878f;
+	--sand-200: #b3a1a9;
+	--sand-100: #c2aeb7;
+	--red-500: #663e49;
+	--red-400: #804e5b;
+	--red-300: #985e6d;
+	--red-200: #b36f82;
+	--red-100: #c77891;
+	--gray-500: #192231;
+	--gray-400: #555d66;
+	--gray-300: #9a9ea6;
+	--gray-200: #d2d5d9;
+	--gray-100: #fafbfc;
+	
+	--bg-color: var( --gray-500 );
+	--text-color: var( --gray-100 );
+	--link-color: var( --sand-200 );
+	--link-hover-color: var( --sand-100 );
+	--form-placeholder-color: var( --gray-200 );
+
+	
+	--primary-font: "Work Sans", "Helvetica", sans-serif;
+	--code-font: "Fira Code", monospace;
+
+
+	--base-font-size: 24px;
+	--base-line-height: 1.25;
+	--base-spacing: calc( var( --base-font-size ) * var( --base-line-height ) );
 }

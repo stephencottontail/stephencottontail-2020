@@ -1,0 +1,96 @@
+body {
+	background-color: var( --bg-color );
+	color: var( --text-color );
+	font-family: var( --primary-font );
+	font-size: var( --base-font-size );
+	line-height: var( --base-line-height );
+	text-rendering: optimizeLegibility;
+}
+
+a {
+	color: var( --link-color );
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	color: var( --link-hover-color );
+	text-decoration: none;
+}
+
+p {
+	margin: 0 0 var( --base-spacing ) 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+h1 {
+	font-size: calc( var( --base-font-size ) * 3 );
+}
+
+h2 {
+	font-size: calc( var( --base-font-size ) * 2.75 );
+}
+
+h3 {
+	font-size: calc( var( --base-font-size ) * 2.4 );
+}
+
+h4 {
+	font-size: calc( var( --base-font-size ) * 2 );
+}
+
+h5 {
+	font-size: calc( var( --base-font-size ) * 1.5 );
+}
+
+h6 {
+	font-size: calc( var( --base-font-size ) * 1.1 );
+}
+
+ul, ol {
+	margin: 0;
+	padding: 0 0 0 var( --base-spacing );
+}
+
+ul ol,
+ul ul,
+ol ul,
+ol ol {
+	margin: 0;
+	padding: 0 0 0 var( --base-spacing );
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dashed var( --text-color );
+}
+
+code,
+kbd,
+pre,
+tt {
+	font-family: var( --code-font );
+}
+
+code,
+kbd,
+tt {
+	background-color: var( --text-color );
+	border-radius: 4px;
+	color: var( --bg-color );
+	padding: 2px;
+}
+
+pre {
+	overflow-y: scroll;
+}
+
+ins {
+	background-color: var( --red-100 );
+	border-radius: 4px;
+	padding: 2px;
+	text-decoration: none;
+}

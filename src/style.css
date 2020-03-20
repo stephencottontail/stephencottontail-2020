@@ -8,9 +8,4 @@
 
 @import "normalize.css";
 @import "variables.css";
-
-body {
-	background-color: var(--bg-color);
-	color: var(--text-color);
-}
-
+@import "partials/typography.css";

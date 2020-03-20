@@ -32,3 +32,7 @@ add_action( 'genesis_setup', function() {
     genesis_unregister_layout( 'sidebar-content-sidebar' );
     genesis_unregister_layout( 'sidebar-sidebar-content' );
 } );
+
+add_action( 'wp_enqueue_scripts', function() {
+    wp_enqueue_style( 'sc2020-google-fonts', '//fonts.googleapis.com/css?family=Work+Sans|Fira+Code:400' );
+} );
