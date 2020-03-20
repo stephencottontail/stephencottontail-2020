@@ -59,7 +59,7 @@ ul ol,
 ul ul,
 ol ul,
 ol ol {
-	margin: 0 0 0 var( --base-spacing );
+	margin: 0;
 	padding: 0 0 0 var( --base-spacing );
 }
 
