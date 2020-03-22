@@ -22,6 +22,10 @@
 	--link-hover-color: var( --sand-100 );
 	--form-placeholder-color: var( --gray-200 );
 
+	--jsx-tag-bg: var( --blue );
+	--jsx-attr-bg: var( --red-300 );
+	--jsx-attr-string-bg: #5b733f;
+
 	
 	--primary-font: "Work Sans", "Helvetica", sans-serif;
 	--code-font: "Fira Code", monospace;
