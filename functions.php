@@ -52,3 +52,44 @@
 	function make_jsx_tag_close() {
 		echo '&gt;</code>';
 	}
+
+	function make_jsx_archive_tag() {
+		global $wp_query;
+
+		if ( is_category() ) {
+			$type = 'category';
+			$value = single_cat_title( '', false );
+			if ( get_the_archive_description() ) {
+				$extra_attrs['description'] = wp_kses( get_the_archive_description(), array() );
+			}
+		} else if ( is_tag() ) {
+			$type = 'tag';
+			$value = single_tag_title( '', false );
+			if ( get_the_archive_description() ) {
+				$extra_attrs['description'] = wp_kses( get_the_archive_description(), array() );
+			}
+		} else if ( is_year() ) {
+			$type = 'year';
+			$value = get_the_date( 'Y' );
+		} else if ( is_month() ) {
+			$type = 'month';
+			$value = get_the_date( 'F Y' );
+		} else if ( is_day() ) {
+			$type = 'day';
+			$value = get_the_date( 'F j, Y' );
+		} else if ( is_search() ) {
+			$type = 'search';
+			$value = get_search_query();
+			$extra_attrs['found'] = $wp_query->found_posts ?: 'none';
+		}
+
+		make_jsx_tag_open( 'Archive' );
+		make_jsx_attr( 'type', $type );
+		make_jsx_attr( 'value', $value );
+		if ( ! empty( $extra_attrs ) && is_array( $extra_attrs ) ) {
+			foreach ( $extra_attrs as $key => $value ) {
+				make_jsx_attr( $key, $value );
+			}
+		}
+		make_jsx_tag_close();
+	}
