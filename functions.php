@@ -11,7 +11,6 @@ add_action( 'genesis_setup', function() {
     add_theme_support( 'genesis-structural-wraps', array(
 	'footer',
 	'footer-widgets',
-	'header',
 	'nav',
 	'site-inner'
     ) );
@@ -31,8 +30,13 @@ add_action( 'genesis_setup', function() {
     genesis_unregister_layout( 'content-sidebar-sidebar' );
     genesis_unregister_layout( 'sidebar-content-sidebar' );
     genesis_unregister_layout( 'sidebar-sidebar-content' );
+
+		remove_action( 'genesis_header', 'genesis_do_header' );
 } );
 
-add_action( 'wp_enqueue_scripts', function() {
-    wp_enqueue_style( 'sc2020-google-fonts', '//fonts.googleapis.com/css?family=Work+Sans|Fira+Code:400' );
+	add_action( 'wp_enqueue_scripts', function() {
+		wp_enqueue_script( 'sc2020-nav', get_stylesheet_directory_uri() . '/js/navigation.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+    wp_enqueue_style( 'sc2020-google-fonts', '//fonts.googleapis.com/css?family=Work+Sans:400,400i,700,700i|Fira+Code:400' );
 } );
+
+require_once( 'lib/header.php' );

@@ -8,4 +8,6 @@
 
 @import "normalize.css";
 @import "variables.css";
+@import "utilities.css";
 @import "partials/typography.css";
+@import "partials/header.css";

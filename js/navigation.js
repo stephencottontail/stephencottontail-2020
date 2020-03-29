@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){var n=e("#open"),o=(e("#close"),e("body"));n.on("click",function(){o.toggleClass("menu-active")})});

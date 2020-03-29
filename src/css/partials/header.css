@@ -1,0 +1,98 @@
+.site-header {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: var( --bg-color );
+	padding: calc( var( --base-spacing ) / 2 );
+	z-index: 20;
+}
+
+.menu-active .site-header {
+	position: fixed;
+}
+
+.nav-primary {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 0;
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: width 300 ease;
+}
+
+.menu-active .nav-primary {
+	border-left: 4px solid var( --text-color );
+	width: 35%;
+}
+
+.nav-primary ul {
+	list-style: none;
+	margin: 0;
+	padding: var( --base-spacing );
+	padding-top: calc( var( --base-spacing ) * 4 );
+}
+
+.nav-primary a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.nav-toggle {
+	position: relative;
+	height: 40px;
+	width: 40px;
+	appearance: none;
+	background-color: inherit;
+	border: 4px solid var( --text-color );
+	border-radius: 50%;
+	color: inherit;
+	overflow: hidden;
+	padding: 0;
+}
+
+.nav-toggle::before,
+.nav-toggle::after {
+	position: absolute;
+	content: '';
+	height: 4px;
+	width: 16px;
+	background-color: var( --text-color );
+	transition: all 500 ease;
+}
+
+.nav-toggle::before {
+	top: 8px;
+	left: 8px;
+}
+
+.nav-toggle::after {
+	bottom: 8px;
+	left: 8px;
+}
+
+.menu-active .nav-toggle::before {
+	top: 14px;
+	transform: rotate( 45deg );
+}
+
+.menu-active .nav-toggle::after {
+	bottom: 14px;
+	transform: rotate( -45deg );
+}
+
+.site-inner,
+.footer-widgets,
+.site-footer {
+	transition: all 300ms ease;
+	transform: translateX( 0 ) scale( 1 );
+}
+
+.menu-active .site-inner,
+.menu-active .footer-widgets,
+.menu-active .site-footer {
+	transform-origin: left center;
+	transform: translateX( -15% ) scale( 0.7 );
+}

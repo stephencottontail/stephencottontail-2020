@@ -1,0 +1,5 @@
+.screen-reader-text,
+.genesis-skip-link {
+	position: absolute;
+	text-indent: -9999em;
+}
