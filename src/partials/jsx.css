@@ -1,0 +1,28 @@
+.jsx {
+	background-color: var( --bg-color );
+	color: var( --text-color );
+	font-size: var( --base-font-size );
+	line-height: 1.5;
+}
+
+.jsx a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.jsx a:hover,
+.jsx a:focus {
+	color: inherit;
+}
+
+.jsx-tag {
+	background-color: var( --jsx-tag-bg );
+}
+
+.jsx-attr {
+	background-color: var( --jsx-attr-bg );
+}
+
+.jsx-attr-string {
+	background-color: var( --jsx-attr-string-bg );
+}
