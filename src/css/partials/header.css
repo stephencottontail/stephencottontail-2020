@@ -1,5 +1,5 @@
 html {
-	position: relative; // makes admin bar not overlap menu button and possibly doesn't have unintended side effects
+	position: relative; /* makes admin bar not overlap menu button and possibly doesn't have unintended side effects */
 }
 
 .site-header {
@@ -83,7 +83,7 @@ html {
 .nav-toggle::before,
 .nav-toggle::after {
 	position: absolute;
-	content: '';
+	content: ' ';
 	height: 4px;
 	width: 16px;
 	background-color: var( --text-color );
