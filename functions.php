@@ -31,7 +31,8 @@ add_action( 'genesis_setup', function() {
     genesis_unregister_layout( 'sidebar-content-sidebar' );
     genesis_unregister_layout( 'sidebar-sidebar-content' );
 
-		remove_action( 'genesis_header', 'genesis_do_header' );
+	remove_action( 'genesis_header', 'genesis_do_header' );
+	remove_action( 'genesis_after_header', 'genesis_do_nav' );
 } );
 
 	add_action( 'wp_enqueue_scripts', function() {
