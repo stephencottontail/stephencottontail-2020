@@ -1,7 +1,3 @@
-html {
-	position: relative; /* makes admin bar not overlap menu button and possibly doesn't have unintended side effects */
-}
-
 .site-header {
 	position: absolute;
 	top: 0;
@@ -10,6 +6,16 @@ html {
 	color: var( --text-color );
 	padding: calc( var( --base-spacing ) / 2 );
 	z-index: 20;
+}
+
+.admin-bar .site-header {
+	top: 46px;
+}
+
+@media screen and (min-width: 784px) {
+	.admin-bar .site-header {
+		top: 32px;
+	}
 }
 
 .site-title {
