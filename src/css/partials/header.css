@@ -39,12 +39,14 @@ html {
 	position: fixed;
 	top: 0;
 	right: 0;
-	height: 100%;
+	height: 100vh;
 	width: 0;
 	font-size: 4vw;
 	font-weight: bold;
-	text-transform: uppercase;
-	transition: width 300 ease;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding-top: calc( var( --base-spacing ) * 4 );
+	transition: width 300ms ease;
 }
 
 .menu-active .nav-panel {
@@ -52,11 +54,22 @@ html {
 	width: 45%;
 }
 
+.nav-panel > * + * {
+	margin-top: var( --base-spacing );
+}
+
+.nav-panel .jsx {
+	display: block;
+	position: relative;
+	left: var( --base-spacing );
+	font-size: 3vw;
+}
+
 .nav-panel ul {
 	list-style: none;
 	margin: 0;
-	padding: var( --base-spacing );
-	padding-top: calc( var( --base-spacing ) * 4 );
+	padding: 0 var( --base-spacing );
+	text-transform: uppercase;
 }
 
 .nav-panel a {
