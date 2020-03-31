@@ -34,4 +34,7 @@
 	--base-font-size: 24px;
 	--base-line-height: 1.25;
 	--base-spacing: calc( var( --base-font-size ) * var( --base-line-height ) );
+
+
+	--single-jsx-adjust: -125px;
 }

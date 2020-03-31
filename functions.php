@@ -20,6 +20,9 @@
         
 		add_theme_support( 'html5', array( 'caption', 'gallery', 'search-form' ) );
 
+		add_post_type_support( 'post', 'genesis-singular-images' );
+		add_post_type_support( 'page', 'genesis-singular-images' );
+
 		unregister_sidebar( 'header-right' );
 		unregister_sidebar( 'sidebar' );
 		unregister_sidebar( 'sidebar-alt' );

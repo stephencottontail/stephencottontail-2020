@@ -1,0 +1,25 @@
+.entry-header {
+	position: relative;
+}
+
+.single .jsx {
+	display: block;
+	width: 75%;
+}
+
+.single .has-post-thumbnail .jsx {
+	position: relative;
+	top: var( --single-jsx-adjust );
+	height: auto;
+}
+
+.single .entry-title {
+	display: inline;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+.single .has-post-thumbnail .entry-content {
+	position: relative;
+	top: calc( var( --single-jsx-adjust ) + var( --base-spacing ) );
+}
