@@ -11,6 +11,8 @@
 	position: relative;
 	top: var( --single-jsx-adjust );
 	height: auto;
+	background: linear-gradient( to top, var( --bg-color ), cubic-bezier( 0.14, 0, 1, 0.75 ), transparent );
+	padding-top: var( --base-spacing );
 }
 
 .single .entry-title {

@@ -22,6 +22,7 @@
   "homepage": "https://github.com/stephencottontail/stephencottontail-2020#readme",
   "devDependencies": {
     "autoprefixer": "^9.7.4",
+    "clean-css": ">=4.1.11",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
@@ -29,9 +30,9 @@
     "gulp-uglify": "^3.0.2",
     "normalize.css": "^8.0.1",
     "postcss-custom-properties": "^9.1.1",
+    "postcss-easing-gradients": "^3.0.1",
     "postcss-import": "^12.0.1",
     "uglify-js": ">=2.6.0",
-    "underscore.string": ">=3.3.5",
-    "clean-css": ">=4.1.11"
+    "underscore.string": ">=3.3.5"
   }
 }
