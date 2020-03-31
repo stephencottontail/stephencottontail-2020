@@ -15,6 +15,15 @@
 	padding-top: var( --base-spacing );
 }
 
+@media screen and (min-width: 1024px) {
+	.single .has-post-thumbnail .jsx {
+		position: absolute;
+		top: auto;
+		bottom: 0;
+		height: auto;
+	}
+}
+
 .single .entry-title {
 	display: inline;
 	font-size: inherit;
@@ -24,4 +33,11 @@
 .single .has-post-thumbnail .entry-content {
 	position: relative;
 	top: calc( var( --single-jsx-adjust ) + var( --base-spacing ) );
+}
+
+@media screen and (min-width: 1024px) {
+	.single .has-post-thumbnail .entry-content {
+		position: static;
+		margin-top: var( --base-spacing );
+	}
 }
