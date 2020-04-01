@@ -1,0 +1,75 @@
+img,
+figure {
+	margin: 0;
+	max-width: 100%;
+	height: auto;
+}
+
+.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 var( --base-spacing ) var( --base-spacing ) 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 var( --base-spacing ) var( --base-spacing );
+}
+
+.wp-caption {
+	font-family: var( --code-font );
+	margin-bottom: var( --base-spacing );
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.gallery-item {
+	flex: 1;
+	text-align: center;
+	vertical-align: top;
+	max-width: 100%;
+	margin-bottom: var( --base-spacing );
+}
+
+.gallery-columns-1 .gallery-item {
+	flex-basis: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	flex-basis: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	flex-basis: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	flex-basis: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	flex-basis: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	flex-basis: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	flex-basis: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	flex-basis: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	flex-basis: 11.11%;
+}
