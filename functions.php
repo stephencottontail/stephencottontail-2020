@@ -33,9 +33,12 @@
 		genesis_unregister_layout( 'sidebar-content-sidebar' );
 		genesis_unregister_layout( 'sidebar-sidebar-content' );
 
+		remove_theme_support( 'genesis-inpost-layouts' );
+		remove_theme_support( 'genesis-archive-layouts' );
+
 		remove_action( 'genesis_header', 'genesis_do_header' );
 		remove_action( 'genesis_after_header', 'genesis_do_nav' );
-	} );
+	}, 15 );
 
 	add_action( 'wp_enqueue_scripts', function() {
 		wp_enqueue_script( 'sc2020-nav', get_stylesheet_directory_uri() . '/js/navigation.js', array( 'jquery' ) );
