@@ -6,7 +6,7 @@
 
 		add_theme_support( 'genesis-responsive-viewport' );
 		add_theme_support( 'genesis-accessibility', array( 'skip-links', 'headings' ) );
-		add_theme_support( 'genesis-footer-widgets', 2 );
+		add_theme_support( 'genesis-footer-widgets', 1 );
 		add_theme_support( 'genesis-structural-wraps', array(
 			'footer',
 			'footer-widgets',
@@ -46,6 +46,7 @@
 	} );
 
 	require_once( 'lib/header.php' );
+	require_once( 'lib/footer.php' );
 
 	function make_jsx_tag_open( $tag_name ) {
 		echo sprintf( '<code class="jsx">&lt;<span class="jsx-tag">%s</span><br />', $tag_name );
