@@ -103,3 +103,7 @@
 		}
 		make_jsx_tag_close();
 	}
+
+	add_action( 'wp_footer', function() {
+		printf( '<div class="screen-reader-text">%s</div>', file_get_contents( __DIR__ . '/svg/svg.svg' ) );
+	}, 99 );
