@@ -1,0 +1,51 @@
+.site-footer .wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.site-footer .wrap > * {
+	flex-grow: 1;
+	flex-basis: calc( 690px * 999 - 100% * 999 );
+	margin: calc( var( --base-spacing ) / 2 );
+}
+
+.footer-logo-home-link {
+	display: inline-block;
+}
+
+.footer-logo {
+	height: 128px;
+	width: 128px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.widget_nav_menu {
+	font-weight: 700;
+}
+
+.widget_nav_menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+.widget_nav_menu a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+/**
+ * Scale copyright text for a better look
+ *
+ * https://www.smashingmagazine.com/2016/05/fluid-typography/
+ */
+.copyright {
+	font-size: calc( 14px + ( 20 - 14 ) * ( 100vw - 320px ) / ( 960 - 320 ) );
+}
+
+.copyright p {
+	margin-bottom: calc( 21px + ( 30 - 21 ) * ( 100vw - 320px ) / ( 960 - 320 ) );
+}
+

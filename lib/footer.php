@@ -22,7 +22,7 @@
 			'context' => 'copyright'
 		) );
 
-		// footer text
+		printf( '<p>&copy; 2020 Stephen Dickinson</p><p>Proudly powered by <a href="https://wordpress.org/">WordPress</a> and the <a href="https://studiopress.com/">Genesis</a> framework.</p>' );
 
 		genesis_markup( array(
 			'close'   => '</div>',
