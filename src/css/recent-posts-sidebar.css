@@ -1,0 +1,10 @@
+@import "normalize.css";
+@import "variables.css";
+
+.components-panel {
+	padding: calc( var( --base-spacing ) / 2 );
+}
+
+.components-panel input[type="url"] {
+	width: 100%;
+}
