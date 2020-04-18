@@ -66,6 +66,8 @@
 			),
 			'show_in_rest' => true
 		) );
+
+		wp_oembed_add_provider( 'https://codepen.io/*/pen/*', 'https://codepen.io/api/oembed' );
 	}, 15 );
 
 	add_action( 'wp_enqueue_scripts', function() {
