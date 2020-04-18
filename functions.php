@@ -77,6 +77,7 @@
 
 	add_action( 'enqueue_block_assets', function() {
 		wp_enqueue_style( 'sc-recent-posts-sidebar-style', get_stylesheet_directory_uri() . '/recent-posts-sidebar.css' );
+		wp_enqueue_style( 'sc-recent-posts-block-style', get_stylesheet_directory_uri() . '/recent-posts-block.css' );
 	} );
 
 	require_once( 'lib/header.php' );

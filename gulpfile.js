@@ -4,7 +4,7 @@ var gulp = require( 'gulp' ),
 	uglify = require( 'gulp-uglify' )
 
 gulp.task( 'styles', function() {
-	return gulp.src( [ './src/css/recent-posts-sidebar.css', './src/css/style.css' ] )
+	return gulp.src( [ './src/css/recent-posts-sidebar.css', './src/css/recent-posts-block.css', './src/css/style.css' ] )
 		.pipe( postCSS() )
 		.pipe( gulp.dest( '.' ) )
 } )
