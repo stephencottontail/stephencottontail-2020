@@ -22,6 +22,8 @@
 
 		add_post_type_support( 'post', 'genesis-singular-images' );
 		add_post_type_support( 'page', 'genesis-singular-images' );
+		add_post_type_support( 'themes', 'custom-fields' );
+		add_post_type_support( 'projects', 'custom-fields' );
 
 		unregister_sidebar( 'header-right' );
 		unregister_sidebar( 'sidebar' );
@@ -38,6 +40,32 @@
 
 		remove_action( 'genesis_header', 'genesis_do_header' );
 		remove_action( 'genesis_after_header', 'genesis_do_nav' );
+
+		register_post_type( 'themes', array(
+			'labels' => array(
+				'singular_name' => 'Theme Post',
+				'name'          => 'Theme Posts'
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array(
+				'slug' => 'themes'
+			),
+			'show_in_rest' => true
+		) );
+
+		register_post_type( 'projects', array(
+			'labels' => array(
+				'singular_name' => 'Project',
+				'name'          => 'Projects'
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array(
+				'slug' => 'projects'
+			),
+			'show_in_rest' => true
+		) );
 	}, 15 );
 
 	add_action( 'wp_enqueue_scripts', function() {
