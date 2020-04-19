@@ -43,7 +43,6 @@
 }
 
 .wp-block-sc-recent-posts .wp-block-sc-recent-posts__entries {
-	flex-basis: calc( 700px * 999 - 100% * 999 );
 	max-width: 70%;
 	margin-left: auto;
 }
