@@ -1,8 +1,8 @@
 var autoprefixer = require( 'autoprefixer' ),
 	atImport = require( 'postcss-import' ),
 	customProps = require( 'postcss-custom-properties' ),
-	nano = require( 'cssnano' ),
-	ease = require( 'postcss-easing-gradients' );
+	hex = require( 'postcss-hexrgba' ),
+	nano = require( 'cssnano' )
 
 module.exports = {
 	plugins: [
@@ -11,7 +11,7 @@ module.exports = {
 			preserve: false
 		} ),
 		autoprefixer,
-		ease,
+		hex,
 		nano
 	]
 }

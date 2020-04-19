@@ -13,6 +13,7 @@
 
 	display: flex;
 	flex-wrap: wrap;
+	position: relative;
 	background-color: var( --bg-color );
 	color: var( --text-color );
 	font-family: var( --primary-font );
@@ -42,9 +43,82 @@
 	text-decoration: underline;
 }
 
+.wp-block-sc-recent-posts .wp-block-sc-recent-posts__jsx {
+	z-index: 10;
+}
+
+.wp-block-sc-recent-posts .wp-block-sc-recent-posts__windows {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	background-size: cover;
+	background-position: 0 0;
+	z-index: 5;
+}
+
+.wp-block-sc-recent-posts .wp-block-sc-recent-posts__window {
+	flex: 1;
+	position: relative;
+	/**
+	 * this is against my personal style but PostCSS
+	 * doesn't convert the hex to RGB if the space is there
+	 */
+	background-color: rgba(var( --bg-color ), 0.35);
+	border: 2px solid var( --bg-color );
+}
+
+.wp-block-sc-recent-posts .top-shade,
+.wp-block-sc-recent-posts .bottom-shade {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background-color: var( --bg-color );
+}
+
+.wp-block-sc-recent-posts .top-shade {
+	top: 0;
+}
+
+.wp-block-sc-recent-posts .bottom-shade {
+	bottom: 0;
+}
+
+.wp-block-sc-recent-posts__window:nth-child( 1 ) .top-shade {
+	height: 5%;
+}
+
+.wp-block-sc-recent-posts__window:nth-child( 1 ) .bottom-shade {
+	height: 12%;
+}
+
+.wp-block-sc-recent-posts__window:nth-child( 2 ) .top-shade {
+	height: 17%;
+}
+
+.wp-block-sc-recent-posts__window:nth-child( 2 ) .bottom-shade {
+	height: 9%;
+}
+
+.wp-block-sc-recent-posts__window:nth-child( 3 ) .top-shade {
+	height: 14%;
+}
+
+.wp-block-sc-recent-posts__window:nth-child( 3 ) .bottom-shade {
+	height: 20%;
+}
+
+.wp-block-sc-recent-posts .wp-block-sc-recent-posts__door {
+	flex-basis: 45%;
+	background-color: var( --bg-color );
+}
+
 .wp-block-sc-recent-posts .wp-block-sc-recent-posts__entries {
 	max-width: 70%;
 	margin-left: auto;
+	z-index: 10;
 }
 
 .wp-block-sc-recent-posts .wp-block-sc-recent-posts__entry {
