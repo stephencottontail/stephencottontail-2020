@@ -46,6 +46,16 @@
 }
 
 .copyright p {
+	position: relative;
 	margin-bottom: calc( 21px + ( 30 - 21 ) * ( 100vw - 320px ) / ( 960 - 320 ) );
 }
 
+.copyright p:first-of-type::after {
+	position: absolute;
+	bottom: calc( ( 21px + ( 30 - 21 ) * ( 100vw - 320px ) / ( 960 - 320 ) ) / -2 );
+	left: 40%;
+	height: 1px;
+	width: 20%;
+	content: '';
+	border-bottom: 1px solid var( --gray-300 );
+}
