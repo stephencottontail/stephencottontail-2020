@@ -6,10 +6,9 @@
 
 		add_theme_support( 'genesis-responsive-viewport' );
 		add_theme_support( 'genesis-accessibility', array( 'skip-links', 'headings' ) );
-		add_theme_support( 'genesis-footer-widgets', 2 );
+		add_theme_support( 'genesis-footer-widgets', 1 );
 		add_theme_support( 'genesis-structural-wraps', array(
 			'footer',
-			'footer-widgets',
 			'nav',
 			'site-inner'
 		) );
@@ -38,6 +37,10 @@
 
 		remove_action( 'genesis_header', 'genesis_do_header' );
 		remove_action( 'genesis_after_header', 'genesis_do_nav' );
+
+		remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
+		remove_action( 'genesis_footer', 'genesis_do_footer' );
+		remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
 	}, 15 );
 
 	add_action( 'wp_enqueue_scripts', function() {
@@ -46,6 +49,7 @@
 	} );
 
 	require_once( 'lib/header.php' );
+	require_once( 'lib/footer.php' );
 
 	function make_jsx_tag_open( $tag_name ) {
 		echo sprintf( '<code class="jsx">&lt;<span class="jsx-tag">%s</span><br />', $tag_name );
@@ -103,3 +107,7 @@
 		}
 		make_jsx_tag_close();
 	}
+
+	add_action( 'wp_footer', function() {
+		printf( '<div class="screen-reader-text">%s</div>', file_get_contents( __DIR__ . '/svg/svg.svg' ) );
+	}, 99 );
