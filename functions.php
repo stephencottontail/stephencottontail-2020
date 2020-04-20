@@ -45,11 +45,15 @@
 		wp_enqueue_style( 'sc2020-google-fonts', '//fonts.googleapis.com/css?family=Work+Sans:400,400i,700,700i|Fira+Code:400' );
 	} );
 
-	add_action( 'enqueue_block_assets', function() {
+	add_action( 'enqueue_block_editor_assets', function() {
 		wp_enqueue_style( 'sc-recent-posts-sidebar-style', get_stylesheet_directory_uri() . '/recent-posts-sidebar.css' );
-		wp_enqueue_style( 'sc-recent-posts-block-style', get_stylesheet_directory_uri() . '/recent-posts-block.css' );
+		wp_enqueue_style( 'sc-recent-posts-editor-style', get_stylesheet_directory_uri() . '/recent-posts-editor.css' );
 	} );
 
+	add_action( 'enqueue_block_assets', function() {
+		wp_enqueue_style( 'sc-recent-posts-style', get_stylesheet_directory_uri() . '/recent-posts-block.css' );
+	} );
+	
 	require_once( 'lib/header.php' );
 
 	function make_jsx_tag_open( $tag_name ) {
