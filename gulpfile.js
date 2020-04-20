@@ -6,7 +6,7 @@ var gulp = require( 'gulp' ),
 	svgstore = require( 'gulp-svgstore' )
 
 gulp.task( 'styles', function() {
-	return gulp.src( './src/css/style.css' )
+	return gulp.src( [ './src/css/recent-posts-sidebar.css', './src/css/recent-posts-editor.css', './src/css/recent-posts-block.css', './src/css/style.css' ] )
 		.pipe( postCSS() )
 		.pipe( gulp.dest( '.' ) )
 } )
