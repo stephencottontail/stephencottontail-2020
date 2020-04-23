@@ -5,6 +5,7 @@
 .single .jsx {
 	display: block;
 	width: 75%;
+	padding: calc( var( --base-spacing ) / 2 );
 }
 
 .single .has-post-thumbnail .jsx {
@@ -12,7 +13,6 @@
 	top: var( --single-jsx-adjust );
 	height: auto;
 	background: linear-gradient( to top, var( --bg-color ), cubic-bezier( 0.14, 0, 1, 0.75 ), transparent );
-	padding-top: var( --base-spacing );
 }
 
 @media screen and (min-width: 1024px) {
@@ -28,6 +28,10 @@
 	display: inline;
 	font-size: inherit;
 	font-weight: inherit;
+}
+
+.single .entry-content {
+	margin: calc( var( --base-spacing ) / 2 ) ;
 }
 
 .single .has-post-thumbnail .entry-content {

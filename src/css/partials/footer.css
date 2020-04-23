@@ -1,3 +1,7 @@
+.site-footer {
+	padding-top: var( --base-spacing );
+}
+
 .site-footer .wrap {
 	display: flex;
 	flex-wrap: wrap;

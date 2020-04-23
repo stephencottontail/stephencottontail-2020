@@ -1,3 +1,10 @@
+.archive .jsx,
+.blog .jsx {
+	display: block;
+	width: 75%;
+	padding: calc( var( --base-spacing ) / 2 );
+}
+
 .archive-entries {
 	padding: 0 calc( var( --base-spacing ) / 2 );
 }
@@ -41,7 +48,7 @@
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
- 	padding: calc( var( --base-spacing ) / 2 ) 0;
+ 	padding: calc( var( --base-spacing ) / 2 );
 }
 
 .archive-pagination a {

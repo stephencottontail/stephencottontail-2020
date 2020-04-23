@@ -9,6 +9,7 @@
 @import "normalize.css";
 @import "variables.css";
 @import "utilities.css";
+@import "partials/layout.css";
 @import "partials/typography.css";
 @import "partials/jsx.css";
 @import "partials/header.css";
