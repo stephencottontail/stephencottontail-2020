@@ -68,6 +68,7 @@
 	display: block;
 	position: relative;
 	left: var( --base-spacing );
+	font-weight: normal;
 	font-size: 3vw;
 }
 

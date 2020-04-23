@@ -45,7 +45,7 @@
 
 	add_action( 'wp_enqueue_scripts', function() {
 		wp_enqueue_script( 'sc2020-nav', get_stylesheet_directory_uri() . '/js/navigation.js', array( 'jquery' ) );
-		wp_enqueue_style( 'sc2020-google-fonts', '//fonts.googleapis.com/css?family=Work+Sans:400,400i,700,700i|Fira+Code:400' );
+		wp_enqueue_style( 'sc2020-google-fonts', '//fonts.googleapis.com/css?family=Work+Sans:400,400i,700,700i|Fira+Code:400,700' );
 	} );
 
 	add_action( 'enqueue_block_editor_assets', function() {

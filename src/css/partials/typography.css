@@ -109,3 +109,13 @@ ins {
 	padding: 2px;
 	text-decoration: none;
 }
+
+table {
+	border: 1px solid var( --gray-200 );
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px solid var( --gray-200 );
+	padding: calc( var( --base-spacing ) / 3 );
+}

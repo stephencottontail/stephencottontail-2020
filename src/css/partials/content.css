@@ -41,3 +41,18 @@
 		margin-top: var( --base-spacing );
 	}
 }
+
+.entry-content h2 {
+	font-family: var( --code-font );
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1.5;
+	margin-bottom: var( --base-spacing );
+}
+
+.entry-content h3 {
+	font-family: var( --code-font );
+	font-size: 24px;
+	line-height: 1.5;
+	margin-bottom: var( --base-spacing );
+}
