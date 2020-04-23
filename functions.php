@@ -106,6 +106,10 @@
 			$extra_attrs['found'] = $wp_query->found_posts ?: 'none';
 		}
 
+		if ( get_query_var( 'paged' ) ) {
+			$extra_attrs['page'] = get_query_var( 'paged' );
+		}
+
 		make_jsx_tag_open( 'Archive' );
 		make_jsx_attr( 'type', $type );
 		make_jsx_attr( 'value', $value );

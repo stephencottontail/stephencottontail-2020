@@ -1,0 +1,88 @@
+.archive-entries {
+	padding: 0 calc( var( --base-spacing ) / 2 );
+}
+
+.archive-entry {
+	padding: calc( var( --base-spacing ) / 2 ) 0;
+}
+
+.archive-entry:not(:last-of-type) {
+	border-bottom: 1px solid var( --gray-300 );
+}
+
+.archive-entry a {
+	color: inherit;
+}
+
+.archive-entry a:hover,
+.archive-entry a:focus {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.archive-entry .entry-title {
+	font-size: 3.5vw;
+	line-height: inherit;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.archive-entry .entry-meta {
+	margin: 0;
+}
+
+.archive-entry time {
+	font-size: 3.5vw;
+}
+
+.archive-pagination {
+	box-sizing: content-box;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+ 	padding: calc( var( --base-spacing ) / 2 ) 0;
+}
+
+.archive-pagination a {
+	display: block;
+	color: inherit;
+}
+
+.archive-pagination a:hover,
+.archive-pagination a:focus {
+	color: inherit;
+}
+
+.archive-pagination .alignleft,
+.archive-pagination .alignright {
+	float: none;
+	margin: 0;
+}
+
+.archive-pagination .pagination-previous,
+.archive-pagination .pagination-next {
+	flex-grow: 1;
+	flex-basis: calc( 400px * 999 - 100% * 999 );
+	border: 4px solid var( --text-color );
+	color: var( --text-color );
+	margin-top: calc( var( --base-spacing ) / 2 );
+	margin-bottom: calc( var( --base-spacing ) / 2 );
+	padding: calc( var( --base-spacing ) / 3 ) calc( var( --base-spacing ) / 2 );
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.archive-pagination .pagination-previous:hover,
+.archive-pagination .pagination-next:hover {
+	background-color: var( --text-color );
+	color: var( --bg-color );
+}
+
+.archive-pagination .pagination-previous {
+	margin-right: calc( var( --base-spacing ) * 2.2 );
+}
+
+.archive-pagination .pagination-next {
+	margin-left: calc( var( --base-spacing ) * 2.2 );
+}

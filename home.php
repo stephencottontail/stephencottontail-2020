@@ -1,9 +1,8 @@
 <?php
 
-	remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
-	remove_action( 'genesis_before_loop', 'genesis_do_date_archive_title' );
+	remove_action( 'genesis_before_loop', 'genesis_do_posts_page_heading' );
 
-	remove_action( 'genesis_entry_header', 'genesis_do_post_format_image', 4 );
+		remove_action( 'genesis_entry_header', 'genesis_do_post_format_image', 4 );
 	remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
 	remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
 	remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
@@ -17,7 +16,18 @@
 	remove_action( 'genesis_after_entry', 'genesis_adjacent_entry_nav' );
 	remove_action( 'genesis_after_entry', 'genesis_get_comments_template' );
 
-	add_action( 'genesis_before_loop', 'make_jsx_archive_tag', 15 );
+	add_action( 'genesis_before_loop', function() {
+		make_jsx_tag_open( 'Blog' );
+
+		if ( get_query_var( 'paged' ) ) {
+			make_jsx_attr( 'page', get_query_var( 'paged' ) );
+		} else {
+			make_jsx_attr( 'page', '1' );
+		}
+
+		make_jsx_tag_close();
+	} );
+
 	add_action( 'genesis_before_loop', function() {
 		genesis_markup( array(
 			'open'    => '<div %s>',
