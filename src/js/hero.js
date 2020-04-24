@@ -9,6 +9,6 @@
 		var percentage = window.scrollY / scrollArea;
 		var delta = strokeGap * percentage;
 
-		svg.setAttribute( 'style', 'stroke-dasharray: ' + ( strokeGap - delta ) + ' ' + ( strokeDash + delta ) );
+		svg.setAttribute( 'style', 'stroke-dasharray: ' + Math.max( ( strokeGap - delta ), 0 ) + ' ' + Math.min( ( strokeDash + delta ), strokeGap ) );
 	} );
 } )()
