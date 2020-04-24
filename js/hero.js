@@ -1,0 +1,1 @@
+!function(){var e=document.getElementsByClassName("hero-header")[0],t=e.getElementsByTagName("svg")[0],s=e.offsetHeight;window.addEventListener("scroll",function(){var e=500*(window.scrollY/s);t.setAttribute("style","stroke-dasharray: "+(500-e)+" "+(0+e))})}();

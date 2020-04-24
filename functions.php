@@ -44,6 +44,10 @@
 	}, 15 );
 
 	add_action( 'wp_enqueue_scripts', function() {
+		if ( is_front_page() ) {
+			wp_enqueue_script( 'sc2020-hero', get_stylesheet_directory_uri() . '/js/hero.js', array(), null, true );
+		}
+
 		wp_enqueue_script( 'sc2020-nav', get_stylesheet_directory_uri() . '/js/navigation.js', array( 'jquery' ) );
 		wp_enqueue_style( 'sc2020-google-fonts', '//fonts.googleapis.com/css?family=Work+Sans:400,400i,700,700i|Fira+Code:400,700' );
 	} );
