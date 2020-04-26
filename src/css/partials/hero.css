@@ -1,0 +1,44 @@
+.hero-header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: var( --base-spacing );
+	text-align: center;
+}
+
+@media (orientation: portrait) {
+	.hero-header {
+		height: 58vh;
+	}
+}
+
+@media (orientation: landscape) {
+	.hero-header {
+		height: 92vh;
+	}
+}
+
+.hero-header svg {
+	position: absolute;
+	top: calc( var( --base-spacing ) / 2 );
+	left: calc( var( --base-spacing ) / 2 );
+	height: calc( 100% - var( --base-spacing ) );
+	width: calc( 100% - var( --base-spacing ) );
+	fill: transparent;
+	stroke: var( --text-color );
+	stroke-width: 3px;
+	z-index: -5;
+}
+
+.hero-title {
+	font-size: 9vw;
+	line-height: 10vw;
+}
+
+.hero-subtitle {
+	font-size: 6.5vw;
+	line-height: 7vw;
+	margin: 0;
+}
