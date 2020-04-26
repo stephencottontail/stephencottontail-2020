@@ -1,1 +1,1 @@
-jQuery(document).ready(function(e){var n=e("#open"),o=(e("#close"),e("body"));n.on("click",function(){o.toggleClass("menu-active")})});
+jQuery(document).ready(function(e){var n=e("#open"),t=n.find(".screen-reader-text"),o=e("body");n.on("click",function(){o.toggleClass("menu-active"),"Open Menu"==t.html()?t.html("Close Menu"):t.html("Open Menu")})});
