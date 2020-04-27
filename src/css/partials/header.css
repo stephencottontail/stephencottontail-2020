@@ -57,7 +57,7 @@
 
 .menu-active .nav-panel {
 	border-left: 4px solid var( --text-color );
-	width: 45%;
+	width: 55%;
 }
 
 .nav-panel > * + * {
@@ -67,15 +67,24 @@
 .nav-panel .jsx {
 	display: block;
 	position: relative;
-	left: var( --base-spacing );
+	left: calc( var( --base-spacing ) / 2 );
 	font-weight: normal;
-	font-size: 3vw;
+	font-size: inherit;
+	padding: 0;
+}
+
+.nav-panel .nav-primary {
+	font-size: 4vw;
+}
+
+.nav-panel .nav-social {
+	font-size: 3.25vw;
 }
 
 .nav-panel ul {
 	list-style: none;
 	margin: 0;
-	padding: 0 var( --base-spacing );
+	padding: 0 calc( var( --base-spacing ) / 2 ); 
 	text-transform: uppercase;
 }
 

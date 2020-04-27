@@ -3,6 +3,7 @@
 	color: var( --text-color );
 	font-size: var( --base-font-size );
 	line-height: 1.5;
+	padding: calc( var( --base-spacing ) / 2 );
 }
 
 .jsx a {

@@ -5,7 +5,6 @@
 .single .jsx {
 	display: block;
 	width: 75%;
-	padding: calc( var( --base-spacing ) / 2 );
 }
 
 .single .has-post-thumbnail .jsx {
