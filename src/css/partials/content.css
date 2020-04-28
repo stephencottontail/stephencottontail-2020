@@ -1,26 +1,8 @@
-.entry-header {
-	position: relative;
-}
-
 .single .jsx {
 	display: block;
 	width: 75%;
-}
-
-.single .has-post-thumbnail .jsx {
-	position: relative;
-	top: var( --single-jsx-adjust );
-	height: auto;
-	background: linear-gradient( to top, var( --bg-color ), cubic-bezier( 0.14, 0, 1, 0.75 ), transparent );
-}
-
-@media screen and (min-width: 1024px) {
-	.single .has-post-thumbnail .jsx {
-		position: absolute;
-		top: auto;
-		bottom: 0;
-		height: auto;
-	}
+	font-size: calc( 16px + ( 24 - 16 ) * ( 100vw - 320px ) / ( 768 - 320 ) );
+	padding: calc( var( --base-spacing ) / 2 );
 }
 
 .single .entry-title {
@@ -31,18 +13,6 @@
 
 .single .entry-content {
 	margin: calc( var( --base-spacing ) / 2 ) ;
-}
-
-.single .has-post-thumbnail .entry-content {
-	position: relative;
-	top: calc( var( --single-jsx-adjust ) + var( --base-spacing ) );
-}
-
-@media screen and (min-width: 1024px) {
-	.single .has-post-thumbnail .entry-content {
-		position: static;
-		margin-top: var( --base-spacing );
-	}
 }
 
 .entry-content h2 {
