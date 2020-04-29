@@ -1,3 +1,4 @@
+.fourohfour-header .jsx,
 .single .jsx {
 	display: block;
 	width: 75%;
@@ -10,6 +11,7 @@
 	font-weight: inherit;
 }
 
+.fourohfour-content,
 .single .entry-content {
 	margin: calc( var( --base-spacing ) / 2 ) ;
 }

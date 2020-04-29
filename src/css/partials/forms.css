@@ -1,0 +1,53 @@
+.search-form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.search-form .search-form-input {
+	flex: 1;
+	margin-right: calc( var( --base-spacing ) * 2.2 );
+	appearance: none;
+	background-color: var( --bg-color );
+	border: 4px solid var( --bg-color );
+	border-bottom-color: var( --red-300 );
+	border-radius: none;
+	color: var( --text-color );
+}
+
+.search-form .search-form-input::-webkit-input-placeholder {
+	color: var( --gray-200 );
+}
+
+.search-form .search-form-input::-mox-placeholder {
+	color: var( --gray-200 );
+}
+
+.search-form .search-form-input:-ms-input-placeholder {
+	color: var( --gray-200 );
+}
+
+.search-form .search-form-input:-moz-placeholder {
+	color: var( --gray-200 );
+}
+
+.search-form .search-form-submit {
+	appearance: none;
+	background-color: var( --red-300 );
+	border: 4px solid var( --red-300 );
+	border-radius: none;
+	color: var( --bg-color );
+	font-weight: bold;
+	letter-spacing: 2px;
+	padding: calc( var( --base-spacing ) / 3 ) calc( var( --base-spacing ) / 2 );
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.search-form .search-form-submit:hover,
+.search-form .search-form-submit:focus {
+	background-color: var( --bg-color );
+	color: var( --red-300 );
+}
+
