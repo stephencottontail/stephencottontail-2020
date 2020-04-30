@@ -21,8 +21,16 @@ figure {
 }
 
 .wp-caption {
-	font-family: var( --code-font );
 	margin-bottom: var( --base-spacing );
+}
+
+.wp-block-image figcaption,
+.wp-caption-text {
+	font-family: var( --code-font );
+}
+
+.wp-block-image figcaption {
+	margin: 0 0 var( --base-spacing ) 0;
 }
 
 .gallery {
