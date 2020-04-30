@@ -1,5 +1,5 @@
 .site-footer {
-	padding-top: var( --base-spacing );
+	padding-top: calc( var( --base-spacing ) * 1.5 );
 }
 
 .site-footer .wrap {
