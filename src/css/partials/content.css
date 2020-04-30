@@ -1,5 +1,4 @@
-.fourohfour-header .jsx,
-.single .jsx {
+.entry-header .jsx {
 	display: block;
 	width: 75%;
 	font-size: calc( 16px + ( 24 - 16 ) * ( 100vw - 320px ) / ( 768 - 320 ) );

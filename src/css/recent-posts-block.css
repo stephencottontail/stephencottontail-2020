@@ -107,6 +107,7 @@
 }
 
 .wp-block-sc-recent-posts .wp-block-sc-recent-posts__title {
+	font-family: var( --primary-font );
 	font-size: var( --font-base );
 	line-height: inherit;
 	margin: 0;
@@ -142,6 +143,7 @@
 
 .wp-block-sc-recent-posts .jsx {
 	flex-basis: 100%;
+	background-color: transparent;
 	font-size: calc( var( --font-base ) * 1.1 );
 	line-height: calc( var( --font-base ) * 1.3 );
 }
