@@ -6,6 +6,7 @@
 	remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_open', 5 );
 	remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 	remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_close', 15 );
+	remove_action( 'genesis_after_entry', 'genesis_get_comments_template' );
 
 	add_action( 'genesis_entry_header', function() {
 		if ( 'projects' == get_post_type() ) {
@@ -43,8 +44,10 @@
 		if ( 'projects' == get_post_type() ) {
 			$embed = wp_oembed_get( get_post_meta( get_the_ID(), 'sc_recent_posts_codepen_url', true ) );
 
-			$content = sprintf( '%s %s', $embed, $content );
+			$content = sprintf( '%s %s %s', $embed, $content );
 		}
+
+		$content = sprintf( '%s %s', $content, '<p class="no-comments">Comments are disabled, but you can always reach out to me on <a href="https://twitter.com/s_cottontail24">Twitter</a> instead</p>' );
 
 		return $content;
 	}, 2 );

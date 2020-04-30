@@ -29,3 +29,10 @@
 	line-height: 1.5;
 	margin-bottom: var( --base-spacing );
 }
+
+.no-comments {
+	position: relative;
+	box-sizing: content-box;
+	color: var( --gray-300 );
+	margin-top: var( --base-spacing );
+}
