@@ -128,6 +128,15 @@
 		make_jsx_tag_close();
 	}
 
+	add_filter( 'genesis_get_image_default_args', function( $args ) {
+		if ( ! isset( $args['context'] ) || 'archive' !== $args['context'] ) {
+			return $args;
+		}
+
+		$args['fallback'] = false;
+		return $args;
+	} );
+
 	add_action( 'wp_footer', function() {
 		printf( '<div class="screen-reader-text">%s</div>', file_get_contents( __DIR__ . '/svg/svg.svg' ) );
 	}, 99 );
